@@ -48,3 +48,8 @@ if [ $condition -eq 0 ] ; then
     sudo apt-get install chromium-browser
     echo "installation complete"
 fi
+
+git clone https://github.com/rbeaden/bashbunny-payloads
+git clone https://github.com/rbeaden/openvpn-install
+git clone https://github.com/rbeaden/katoolin
+git clone https://github.com/hak5darren/USB-Rubber-Ducky
