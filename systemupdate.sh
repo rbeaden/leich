@@ -54,7 +54,7 @@ condition=$(which $program 2>/dev/null | grep -v "not found" | wc -l)
 if [ $condition -eq 0 ] ; then
     echo "$program is not installed"
     echo "installing $program"
-    echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | su$
+    echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee -a /etc/apt/sources.list
     wget https://dl.google.com/linux/linux_signing_key.pub
     sudo apt-key add linux_signing_key.pub
     sudo apt update
