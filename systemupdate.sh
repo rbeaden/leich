@@ -62,7 +62,21 @@ if [ $condition -eq 0 ] ; then
     echo "installation complete"
 fi
 
+program="companion21"
+condition=$(which $program 2>/dev/null | grep -v "not found" | wc -l)
+if [ $condition -eq 0 ] ; then
+    echo "$program is not installed"
+    echo "installing $program"
+    sudo ./opentxin
+    echo "installation complete"
+fi
+
 git clone https://github.com/rbeaden/bashbunny-payloads
 git clone https://github.com/rbeaden/openvpn-install
 git clone https://github.com/rbeaden/katoolin
 git clone https://github.com/hak5darren/USB-Rubber-Ducky
+
+#wget https://github.com/betaflight/betaflight-configurator/releases/download/10.1.0/betaflight-configurator_10.1.0_amd64.deb
+#sudo dpkg -i betaflight-configurator_10.1.0_amd64.deb
+#(echo '# DFU (Internal bootloader for STM32 MCUs)';  echo 'ACTION=="add", SUBSYSTEM=="usb", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="df11", MODE="0664", GROUP="plugdev"') | sudo tee /etc/udev/rules.d/45-stdfu-permissions.rules > /dev/null
+#sudo usermod -G dialout -a leich
