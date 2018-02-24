@@ -1,0 +1,7 @@
+#!/bin/bash
+
+wget https://github.com/betaflight/betaflight-configurator/releases/download/1$
+sudo dpkg -i betaflight-configurator_10.1.0_amd64.deb
+(echo '# DFU (Internal bootloader for STM32 MCUs)';  echo 'ACTION=="add", SUBS$
+sudo usermod -G dialout -a leich
+
