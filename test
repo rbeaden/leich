@@ -5,3 +5,5 @@ condition=$(which $program 2>/dev/null | grep -v "not found" | wc -l)
 if [ $condition -eq 0 ] ; then
 	echo "Fail"
 fi
+
+#which "Betaflight-configurator" 2>/dev/null | grep -v "not found" | wc -l

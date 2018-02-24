@@ -1,1 +1,9 @@
-Raspberry Pi python scripts
+Leich
+
+PiPython - Python Script for use with raspberry pi. 
+betaflightisntaller - Installer bash script for betaflight configurator
+checkos.sh - broken bash script for checking Linux os
+opentxin - Installer bash script for opentx companion
+os.sh - anther broken bash script for checking os
+systemupdate.sh - completes apt-get update, installs my basic apps including nmap and chrome.
+test - bash script for testing 
