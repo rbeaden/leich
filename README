@@ -7,3 +7,27 @@ opentxin - Installer bash script for opentx companion
 os.sh - anther broken bash script for checking os
 systemupdate.sh - completes apt-get update, installs my basic apps including nmap and chrome.
 test - bash script for testing 
+
+systemupdate.sh
+***************
+
+Installs:
+
+Python3
+pip
+Git
+Chromium
+Chrome
+Nmap
+
+opextx
+~work in progress betaflight configurator
+
+Git clones
+-externalinstallers
+	OpenVPN installer script
+	Katoolin 
+
+-~/hak5
+	Bashbunny Payloads
+	RubberDucky Payloads

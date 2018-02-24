@@ -71,10 +71,20 @@ if [ $condition -eq 0 ] ; then
     echo "installation complete"
 fi
 
-git clone https://github.com/rbeaden/bashbunny-payloads
-git clone https://github.com/rbeaden/openvpn-install
-git clone https://github.com/rbeaden/katoolin
+mkdir externalInstallers
+cd externalInstallers
+
+git clone https://github.com/Nyr/openvpn-install
+git clone https://github.com/LionSec/katoolin
+
+cd ~
+mkdir hak5
+cd hak5
+
+git clone https://github.com/hak5/bashbunny-payloads
 git clone https://github.com/hak5darren/USB-Rubber-Ducky
+
+cd ~/leich
 
 #wget https://github.com/betaflight/betaflight-configurator/releases/download/10.1.0/betaflight-configurator_10.1.0_amd64.deb
 #sudo dpkg -i betaflight-configurator_10.1.0_amd64.deb
