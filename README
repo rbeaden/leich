@@ -7,6 +7,7 @@ opentxin - Installer bash script for opentx companion
 os.sh - anther broken bash script for checking os
 systemupdate.sh - completes apt-get update, installs my basic apps including nmap and chrome.
 test - bash script for testing 
+vagrantinstaller - Bash script installs virtualbox and vagrant
 
 systemupdate.sh
 ***************
@@ -22,6 +23,8 @@ Nmap
 
 opextx
 ~work in progress betaflight configurator
+
+Runs vagrant installer bash script
 
 Git clones
 -externalinstallers

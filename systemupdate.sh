@@ -71,6 +71,9 @@ if [ $condition -eq 0 ] ; then
     echo "installation complete"
 fi
 
+sudo ./vagrantinstaller
+
+cd ~
 mkdir externalInstallers
 cd externalInstallers
 
