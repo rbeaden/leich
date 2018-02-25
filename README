@@ -8,6 +8,7 @@ os.sh - anther broken bash script for checking os
 systemupdate.sh - completes apt-get update, installs my basic apps including nmap and chrome.
 test - bash script for testing 
 vagrantinstaller - Bash script installs virtualbox and vagrant
+veracryptinstaller - Bash Script installs veracrypt using apt 
 
 systemupdate.sh
 ***************
