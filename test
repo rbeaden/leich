@@ -1,7 +1,8 @@
 #!/bin/bash
 
-cat /etc/lsb-release
+#cat /etc/lsb-release
 cat /etc/lsb-release | grep '^DISTRIB_ID' | awk -F=  '{ print $2 }'
+dpkg -l | grep 'ubuntu-desktop' | awk -F= '{ print $2 }'
 
 #echo "Install virtualbox?"
 #program="virtualbox"
