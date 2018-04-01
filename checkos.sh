@@ -2,7 +2,7 @@
 
 #cat /proc/version
 #lsb_release -a
-cat /etc/*-release | grep 'DISTRIB_ID' | awk -F=  '{ print $2 }'
+cat /etc/*-release | grep 'ID' | awk -F=  '{ print $2 }'
 
 #condition=$(cat /etc/*release | grep "Raspbian" | wc -l)
 #if [ -z $condition ] ; then
