@@ -71,6 +71,21 @@ if [ $condition -eq 0 ] ; then
     echo "installation complete"
 fi
 
+program="virtualbox"
+condition=$(which $program 2>/dev/null | grep -v "not found" | wc -l)
+if [ $condition -eq 0 ] ; then
+    echo "$program is not installed"
+    echo "installing $program"
+    cd ~
+    mkdir vboxinstall
+    cd vboxinstall
+    cp ~/leich/vboxinstall ~/vboxinstall/vboxinstall
+    sudo ./vboxinstall
+    echo "installation complete"
+fi
+
+cd ~/leich
+
 program="vagrant"
 condition=$(which $program 2>/dev/null | grep -v "not found" | wc -l)
 if [ $condition -eq 0 ] ; then
