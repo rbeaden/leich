@@ -71,7 +71,15 @@ if [ $condition -eq 0 ] ; then
     echo "installation complete"
 fi
 
-sudo ./vagrantinstaller
+program="vagrant"
+condition=$(which $program 2>/dev/null | grep -v "not found" | wc -l)
+if [ $condition -eq 0 ] ; then
+    echo "$program is not installed"
+    echo "installing $program"
+    sudo ./vagrantinstaller
+    echo "installation complete"
+fi
+
 
 cd ~
 mkdir externalInstallers

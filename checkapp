@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#Takes the name of a program and tells you if it is installed
+
+program=$1
+condition=$(which $program 2>/dev/null | grep -v "not found" | wc -l)
+if [ $condition -eq 0 ] ; then
+    echo "$program is not installed"
+else
+    echo "$program is installed"
+fi
