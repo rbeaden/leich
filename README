@@ -11,6 +11,7 @@ vagrantinstaller - Bash script installs virtualbox and vagrant
 veracryptinstaller - Bash Script installs veracrypt using apt
 checkapp - checks if an app is installed ./checkapp <app name>
 vboxinstall - installs virtualbox 
+metasploit - contains scripts for installing metasploit needs cleanup
 
 systemupdate.sh
 ***************
@@ -23,11 +24,13 @@ Git
 Chromium
 Chrome
 Nmap
-
+msfconsole
+vbox
+vagrant
 opextx
 ~work in progress betaflight configurator
-
-Runs vagrant installer bash script
+Betaflight
+~broken
 
 Git clones
 -externalinstallers
