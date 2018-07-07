@@ -116,6 +116,14 @@ if [ $condition -eq 0 ] ; then
     echo "installation complete"
 fi
 
+program="dirb"
+condition=$(which $program 2>/dev/null | grep -v "not found" | wc -l)
+if [ $condition -eq 0 ] ; then
+    echo "$program is not installed"
+    echo "installing $program"
+    sudo apt install dirb
+    echo "installation complete"
+fi
 
 cd ~
 mkdir externalInstallers
@@ -131,6 +139,8 @@ cd hak5
 git clone https://github.com/hak5/bashbunny-payloads
 git clone https://github.com/hak5darren/USB-Rubber-Ducky
 
+cd ~
+git clone https://github.com/danielmiessler/SecLists
 cd ~/leich
 
 #wget https://github.com/betaflight/betaflight-configurator/releases/download/10.1.0/betaflight-configurator_10.1.0_amd64.deb
