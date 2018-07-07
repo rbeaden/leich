@@ -96,6 +96,27 @@ if [ $condition -eq 0 ] ; then
 fi
 
 
+program="veracrypt"
+condition=$(which $program 2>/dev/null | grep -v "not found" | wc -l)
+if [ $condition -eq 0 ] ; then
+    echo "$program is not installed"
+    echo "installing $program"
+    sudo ./vercyptinstaller
+    echo "installation complete"
+fi
+
+program="msfconsole"
+condition=$(which $program 2>/dev/null | grep -v "not found" | wc -l)
+if [ $condition -eq 0 ] ; then
+    echo "$program is not installed"
+    echo "installing $program"
+    cd Metasploit
+    sudo ./msfwebinstall
+    cd ..
+    echo "installation complete"
+fi
+
+
 cd ~
 mkdir externalInstallers
 cd externalInstallers
