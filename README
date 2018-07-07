@@ -1,10 +1,10 @@
 Leich
 
 PiPython - Python Script for use with raspberry pi. 
-betaflightisntaller - Installer bash script for betaflight configurator
-checkos.sh - broken bash script for checking Linux os
+betaflightisntaller - Installer bash script for betaflight configurator/Broken
+checkos.sh - Bash script for checking Which Linux OS
 opentxin - Installer bash script for opentx companion
-os.sh - anther broken bash script for checking os
+os.sh - Bash script checks what type of OS linux/MAC/Windows
 systemupdate.sh - completes apt-get update, installs my basic apps including nmap and chrome.
 test - bash script for testing 
 vagrantinstaller - Bash script installs virtualbox and vagrant
@@ -12,6 +12,7 @@ veracryptinstaller - Bash Script installs veracrypt using apt
 checkapp - checks if an app is installed ./checkapp <app name>
 vboxinstall - installs virtualbox 
 metasploit - contains scripts for installing metasploit needs cleanup
+utilities - installs apps that should be installed by default
 
 systemupdate.sh
 ***************

@@ -24,3 +24,7 @@ grep -Eo '(http|https)://[^/"]+' wget.log | sort -u
 
 #Download Website
 wget -mkEpnp
+
+#Not installed ?????
+sudo apt install net-tools
+sudo apt install whois
