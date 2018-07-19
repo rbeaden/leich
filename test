@@ -30,3 +30,10 @@ sudo apt install net-tools
 sudo apt install whois
 sudo apt install binwalk #used to extact files from images
 sudo apt install tesseract-ocr #used to scrape text from images
+
+if [ "$test1" = "$test2" ]
+then
+        echo "Both words contents are same"
+else
+        echo "Both words contents are not same"
+fi
