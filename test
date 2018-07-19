@@ -28,3 +28,5 @@ wget -mkEpnp
 #Not installed ?????
 sudo apt install net-tools
 sudo apt install whois
+sudo apt install binwalk #used to extact files from images
+sudo apt install tesseract-ocr #used to scrape text from images
