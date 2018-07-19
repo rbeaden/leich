@@ -1,3 +1,6 @@
 #!/bin/bash
 
-gnome-terminal -- cd ~/leich && ./checkos.sh
+#gnome-terminal -- cd ~/leich && ./checkos.sh
+#gnome-terminal -x sh -c "./checkos.sh; bash"
+gnome-terminal -- /bin/bash -c './checkos.sh; read'
+
