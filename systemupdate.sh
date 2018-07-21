@@ -135,6 +135,8 @@ git clone https://github.com/LionSec/katoolin
 cd ~
 mkdir hak5
 cd hak5
+wget https://wifipineapple.com/wp6.sh
+chmod +x wp6.sh
 
 git clone https://github.com/hak5/bashbunny-payloads
 git clone https://github.com/hak5darren/USB-Rubber-Ducky

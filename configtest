@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo "testvar=dave" > test.cfg
+source test.cfg
+echo $testvar

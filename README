@@ -14,6 +14,9 @@ vboxinstall - installs virtualbox
 metasploit - contains scripts for installing metasploit needs cleanup
 utilities - installs apps that should be installed by default
 wpsinstall - installs WPSScan
+cool.cfg - example config file
+loadconfig - cleans the config file + loads
+
 
 systemupdate.sh
 ***************

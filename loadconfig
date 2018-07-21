@@ -9,3 +9,6 @@ if egrep -q -v '^#|^[^ ]*=[^;]*' "$configfile"; then
   egrep '^#|^[^ ]*=[^;&]*'  "$configfile" > "$configfile_secured"
   configfile="$configfile_secured"
 fi
+
+# now source it, either the original or the filtered variant
+source "$configfile"
