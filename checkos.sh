@@ -11,15 +11,18 @@
 
 #osversion=Ubuntu
 
-condition=$(cat /etc/*-release | grep 'ID' | awk -F=  '{ print $2 }'| head -1)
-echo $condition
-if [ "$condition" = "Ubuntu" ] ; then
-  codename=$(cat /etc/*-release | grep 'VERSION_CODENAME' | cut -d "=" -f2)
-  echo $codename
-fi
+#condition=$(cat /etc/*-release | grep 'ID' | awk -F=  '{ print $2 }'| head -1)
+#echo $condition
+#if [ "$condition" = "Ubuntu" ] ; then
+#  codename=$(cat /etc/*-release | grep 'VERSION_CODENAME' | cut -d "=" -f2)
+#  echo $codename
+#fi
 #condition=$(cat /etc/*release | grep "Ubunutu" | wc -l)
 #if [ -z $condition ] ; then
 #    echo "Test 2"
 #fi
+
+condition=$(cat /etc/*-release | grep 'NAME' | awk -F=  '{ print $2 }'| grep "Ubuntu" | head -n 1)
+echo $condition
 
 #exit
