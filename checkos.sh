@@ -23,6 +23,8 @@
 #fi
 
 condition=$(cat /etc/*-release | grep 'NAME' | awk -F=  '{ print $2 }'| grep "Ubuntu" | head -n 1)
-echo $condition
+sed -e 's/^"//' -e 's/"$//' <<<"$condition"
+
+
 
 #exit
