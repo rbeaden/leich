@@ -1,6 +1,9 @@
 import bs4 as bs
 import urllib.request
 
+#from bs4 import BeautifulSoup 
+#import urllib2
+
 source = urllib.request.urlopen('https://pythonprogramming.net/parsememcparseface/').read()
 
 soup = bs.BeautifulSoup(source,'lxml')
