@@ -13,5 +13,6 @@ echo 10.  dirbinstall.sh
 echo 11. vagrantinstaller
 echo 12. all
 echo Select option\:
+
 read command
 echo $command
