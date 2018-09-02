@@ -19,4 +19,4 @@ while True:
     msg = "T=%s, P=%s, H=%s" % (t, p, h)
 
     sense.show_message(msg, scroll_speed=0.05, back_colour=bg)
-    print msg
+    print(msg)
