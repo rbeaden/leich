@@ -6,17 +6,24 @@ red = (255, 0, 0)
 green = (0, 255, 0)
 
 # Define the functions
-#def red():
-#  sense.clear(255, 0, 0)
+def red():
+  sense.clear(255, 0, 0)
 
-#def blue():
-#  sense.clear(0, 0, 255)
+def blue():
+  sense.clear(0, 0, 255)
 
-#def green():
-#  sense.clear(0, 255, 0)
+def green():
+  sense.clear(0, 255, 0)
   
-#def yellow():
-#  sense.clear(255, 255, 0)
+def yellow():
+  sense.clear(255, 255, 0)
+
+# Tell the program which function to associate with which direction
+sense.stick.direction_up = red
+sense.stick.direction_down = blue
+sense.stick.direction_left = green
+sense.stick.direction_right = yellow
+sense.stick.direction_middle = sense.clear    # Press the enter key
 
 while True:
 
@@ -49,16 +56,17 @@ while True:
   y = acceleration['y']
   z = acceleration['z']
 
-  x = abs(x)
-  y = abs(y)
-  z = abs(z)
+#  x = abs(x)
+#  y = abs(y)
+#  z = abs(z)
 
   message = message + " x: " + str(x) + " y: " + str(y) + " z: " + str(z)
   print(message)
   if x > 1 or y > 1 or z > 1:
-    sense.show_letter("!", red)
-  else:
-    sense.clear()
+#    sense.show_letter("!", red)
+    print("!")
+#  else:
+#    sense.clear()
 
   # Tell the program which function to associate with which direction
  # sense.stick.direction_up = red
