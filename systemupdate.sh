@@ -8,58 +8,36 @@ program="python3"
 condition=$(which $program 2>/dev/null | grep -v "not found" | wc -l)
 if [ $condition -eq 0 ] ; then
     echo "$program is not installed"
-    sudo apt-get install python3
+    cd installers
+    sudo ./python3install.sh
+    cd ..
 fi
 
 program="nmap"
 condition=$(which $program 2>/dev/null | grep -v "not found" | wc -l)
 if [ $condition -eq 0 ] ; then
     echo "$program is not installed"
-    echo "installing $program"
-    sudo apt-get install nmap
-    echo "installation complete"
-fi
-
-program="pip"
-condition=$(which $program 2>/dev/null | grep -v "not found" | wc -l)
-if [ $condition -eq 0 ] ; then
-    echo "$program is not installed"
-    echo "installing $program"
-    sudo apt-get install python-setuptools python-pip
-    echo "installation complete"
+    cd installers
+    sudo ./nmapinstall.sh
+    cd ..
 fi
 
 program="git"
 condition=$(which $program 2>/dev/null | grep -v "not found" | wc -l)
 if [ $condition -eq 0 ] ; then
     echo "$program is not installed"
-    echo "installing $program"
-    sudo apt-get install git
-    sudo pip install github3.py
-    echo "installation complete"
-fi
-
-
-program="chromium-browser"
-condition=$(which $program 2>/dev/null | grep -v "not found" | wc -l)
-if [ $condition -eq 0 ] ; then
-    echo "$program is not installed"
-    echo "installing $program"
-    sudo apt-get install chromium-browser
-    echo "installation complete"
+    cd installers
+    sudo ./gitinstall.sh
+    cd ..
 fi
 
 program="google-chrome-stable"
 condition=$(which $program 2>/dev/null | grep -v "not found" | wc -l)
 if [ $condition -eq 0 ] ; then
     echo "$program is not installed"
-    echo "installing $program"
-    echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee -a /etc/apt/sources.list
-    wget https://dl.google.com/linux/linux_signing_key.pub
-    sudo apt-key add linux_signing_key.pub
-    sudo apt update
-    sudo apt install google-chrome-stable
-    echo "installation complete"
+    cd installers
+    sudo ./chromeinstall.sh
+    cd ..
 fi
 
 program="companion21"

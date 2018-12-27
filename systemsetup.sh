@@ -9,7 +9,7 @@ echo 6. vercyptinstaller
 echo 7. chromiuminstall.sh
 echo 8. python3install.sh
 echo 9. wpsinstall
-echo 10.  dirbinstall.sh
+echo 10. dirbinstall.sh
 echo 11. vagrantinstaller
 echo 12. all
 echo Select option\:
