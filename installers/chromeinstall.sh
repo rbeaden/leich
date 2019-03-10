@@ -1,5 +1,5 @@
 #!/bin/bash
-CWD="$(pwd)"
+CWD="$(pwd)" && echo CWD
 echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee -a /etc/apt/sources.list
 mkdir ~/chromeinstall
 cd ~/chromeinstall

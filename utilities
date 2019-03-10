@@ -2,3 +2,4 @@
 
 sudo apt install net-tools
 sudo apt install whois
+sudo apt-get install gparted

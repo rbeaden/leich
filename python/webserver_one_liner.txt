@@ -1,0 +1,2 @@
+python -m http.server 8000
+Will Load index.html or list folder contents
