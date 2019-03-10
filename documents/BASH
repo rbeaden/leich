@@ -9,4 +9,4 @@ mkdir <name> ---makes a new directory
 grep -r ---Recursivly scans a whole folder
 cat ---displays the contents of a file
 for file in *.png; do mv "$file" "${file/_h.png/_half.png}"; done ---One liner to rename picture files
-
+rename 's/\.sh//' * ---Removes .sh from filenames requires apt install rename
