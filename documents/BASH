@@ -1,1 +1,3 @@
 grep -r ---Recursivly scans a whole folder
+for file in *.png; do mv "$file" "${file/_h.png/_half.png}"; done ---One liner to rename picture files
+
