@@ -6,7 +6,9 @@ python3 manage.py startapp main
 
 python3 manage.py runserver
 
+################################
 mysite/mysite/urls.py:
+################################
 
 from django.contrib import admin
 from django.urls import path, include
@@ -16,7 +18,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 ]
 
+################################
 mysite/main/urls.py:
+################################
 
 from django.urls import path
 from . import views
@@ -28,7 +32,9 @@ urlpatterns = [
     path("", views.homepage, name="homepage"),
 ]
 
+################################
 mysite/main/views.py
+################################
 
 from django.shortcuts import render
 from django.http import HttpResponse
@@ -37,7 +43,9 @@ from django.http import HttpResponse
 def homepage(request):
     return HttpResponse("pythonprogramming.net homepage! Wow so #amaze.")
 
+################################
 mysite/main/models.py
+################################
 
 from django.db import models
 
@@ -50,7 +58,9 @@ class Tutorial(models.Model):
     def __str__(self):
         return self.tutorial_title
 
+################################
 mysite/mysite/settings.py
+################################
 
 INSTALLED_APPS = [
     'main.apps.MainConfig',
@@ -62,7 +72,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
+################################
 mysite/main/apps.py:
+################################
 
 from django.apps import AppConfig
 
@@ -70,6 +82,7 @@ from django.apps import AppConfig
 class MainConfig(AppConfig):
     name = 'main'
 
+################################
 python3 manage.py makemigrations
 
 python3 manage.py migrate
@@ -84,7 +97,9 @@ Superuser created successfully.
 
 http://127.0.0.1:8000/admin
 
+################################
 mysite/main/admin.py
+################################
 
 from django.contrib import admin
 from .models import Tutorial
@@ -92,7 +107,9 @@ from .models import Tutorial
 
 admin.site.register(Tutorial)
 
+################################
 mysite/main/admin.py
+################################
 
 from django.contrib import admin
 from .models import Tutorial
@@ -120,7 +137,9 @@ class TutorialAdmin(admin.ModelAdmin):
 
 admin.site.register(Tutorial,TutorialAdmin)
 
+################################
 mysite/main/admin.py
+################################
 
 from django.db import models
 from datetime import datetime
@@ -133,9 +152,12 @@ class Tutorial(models.Model):
     def __str__(self):
         return self.tutorial_title
 
+################################
 python3 -m pip install django-tinymce4-lite.
-
+################################
+################################
 mysite/mysite/settings.py
+################################
 
 INSTALLED_APPS = (
     ...
@@ -172,7 +194,9 @@ TINYMCE_DEFAULT_CONFIG = {
     'statusbar': True,
     }
 
+################################
 mysite/mysite/urls.py
+################################
 
 urlpatterns = patterns('',
     ...
@@ -180,7 +204,9 @@ urlpatterns = patterns('',
     ...
 )
 
+################################
 mysite/main/admin.py
+################################
 
 from django.contrib import admin
 from .models import Tutorial
@@ -200,7 +226,9 @@ class TutorialAdmin(admin.ModelAdmin):
 
 admin.site.register(Tutorial,TutorialAdmin)
 
+################################
 mysite/main/views.py
+################################
 
 from django.shortcuts import render
 from django.http import HttpResponse
@@ -212,7 +240,9 @@ def homepage(request):
                   template_name='main/home.html',
                   context = {"tutorials":Tutorial.objects.all})
 
+################################
 mysite/main/templates/main/home.html
+################################
 
 {% load static %}
 <!-- Prism CSS -->
@@ -231,6 +261,3 @@ mysite/main/templates/main/home.html
 <!-- Prism JS -->
 <script src="{% static "tinymce/js/prism.js" %}"></script>
 </body>
-
-
-
