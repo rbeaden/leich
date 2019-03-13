@@ -1,5 +1,6 @@
 #!/bin/bash
 
+function menu {
 echo 1. betaflightinstaller
 echo 2. nmapinstall
 echo 3. vboxinstall
@@ -13,12 +14,30 @@ echo 10. dirbinstall
 echo 11. vagrantinstaller
 echo 12. all
 echo Select option\:
-
 read command
-echo $command
+echo " "
+choice
+}
 
+function choice {
 if [ $command -eq 0 ] ; then
-    echo "$program is not installed"
+    echo "Exiting..."
+    exit
+elif [ $command -eq 2 ] ; then
+    echo "Checking Nmap..."
+    ./checkapp nmap
+    echo " "
+    menu
+elif [ $command -eq 3 ] ; then
+    echo "Checking Vbox..."
+    ./checkapp virtualbox
+    echo " "
+    menu
 else
-    echo "$program is installed"
+    echo "Command not found!"
+    echo " "
+    menu
 fi
+}
+
+menu
