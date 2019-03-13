@@ -9,3 +9,4 @@ cmake ../src
 make clean
 make
 sudo make install
+cd $CWD

@@ -32,7 +32,7 @@ elif [ $command -eq 2 ] ; then
     menu
 elif [ $command -eq 3 ] ; then
     echo "Checking Vbox..."
-    installed="$(./checkapp virtualbox)"
+    installed="$(. ./checkapp virtualbox)"
     echo ${installed}
     echo " "
     menu
