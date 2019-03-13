@@ -26,12 +26,14 @@ if [ $command -eq 0 ] ; then
     exit
 elif [ $command -eq 2 ] ; then
     echo "Checking Nmap..."
-    ./checkapp nmap
+    installed="$(./checkapp nmap)"
+    echo ${installed}
     echo " "
     menu
 elif [ $command -eq 3 ] ; then
     echo "Checking Vbox..."
-    ./checkapp virtualbox
+    installed="$(./checkapp virtualbox)"
+    echo ${installed}
     echo " "
     menu
 else
