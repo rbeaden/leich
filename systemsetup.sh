@@ -13,6 +13,7 @@ echo 9. wpsinstall
 echo 10. dirbinstall
 echo 11. vagrantinstaller
 echo 12. all
+echo 0. Exit
 echo Select option\:
 read command
 echo " "
@@ -40,4 +41,7 @@ else
 fi
 }
 
+CWD="$(pwd)"
+. ./printEcho
+echo " "
 menu
