@@ -36,6 +36,10 @@ elif [ $command -eq 3 ] ; then
     echo ${installed}
     echo " "
     menu
+elif [ $command -eq 99 ] ; then
+    . ./printEcho
+    echo " "
+    menu
 else
     echo "Command not found!"
     echo " "
