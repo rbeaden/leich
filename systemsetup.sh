@@ -1,19 +1,14 @@
 #!/bin/bash
 
 function menu {
-echo 1. betaflightinstaller
-echo 2. nmapinstall
-echo 3. vboxinstall
-echo 4. chromeinstall
-echo 5. opentxin
-echo 6. vercyptinstaller
-echo 7. chromiuminstall
-echo 8. python3install
-echo 9. wpsinstall
-echo 10. dirbinstall
-echo 11. vagrantinstaller
-echo 12. all
-echo 0. Exit
+echo "***************************************************************"
+echo Installers:
+echo "***************************************************************"
+echo 1. Atom 2. Beta Flight Configurator 3. Chrome 4. Chromium
+echo 5. Dirb 6. GIT 7. Monero Wallet 8. NMap 9. OpenTX 10. Python 3
+echo 11. Python 3.7 12. Sublime Text 13. Terminator 14. Termite 15.
+echo Vbox 16. Vagrant 17.  Vercrypt 18. WPS 19. Metasploit 0. EXIT
+echo "***************************************************************"
 echo Select option\:
 read command
 echo " "
