@@ -1,0 +1,20 @@
+GPG
+
+17  sudo apt install pgpgpg
+ 2025  gpg --gen-key
+ 2027  gpg --list-keys
+ 2030  gpg --export
+ 2036  gpg --list-secret-keys
+ 2037  gpg --export-secret-keys Richard
+ 2039  gpg --export-secret-keys Richard > Richard-Key-P.asc
+ 2043  gpg --delete-keys
+ 2047  gpg --delete-secret-keys Richard
+ 2051  gpg --help
+ 2061  gpg --full-generate-key
+ 2064  gpg --export Richard > Richard-Key.pub
+ 2070  gpg -e -r Richard test.txt
+ 2080  gpg -o test.txt -d test.txt.gpg
+ 2081  gpg -d test.txt.gpg
+ 2082  gpg -d test.txt.gpg > test.txt
+ 2090  gpg -d test.txt.gpg --output test.txt
+ 2091  gpg --output test.txt -d test.txt.gpg
