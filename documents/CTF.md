@@ -12,9 +12,9 @@
 
 ([rebootuser](https://www.rebootuser.com/)). -Like gtfobins
 
-[steghide]: http://steghide.sourceforge.net/
+[steghide](http://steghide.sourceforge.net/)
 
-[snow]: http://www.darkside.com.au/snow/
+[snow](http://www.darkside.com.au/snow/)
 
 [cribdrag.py]: https://github.com/SpiderLabs/cribdrag
 
