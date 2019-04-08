@@ -1,6 +1,4 @@
-* GPG
 
- gpg-Leich
  ===============
 
  > Leich | 8th April, 2019
