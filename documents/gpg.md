@@ -10,9 +10,9 @@
 
  ([https://www.gnupg.org/](https://www.gnupg.org/)).
 
- 'sudo apt install pgpgpg'
+ `sudo apt install pgpgpg`
 
-  'gpg --gen-key
+  `gpg --gen-key
   gpg --list-keys
   gpg --export
   gpg --list-secret-keys
@@ -29,7 +29,6 @@
   gpg -d test.txt.gpg > test.txt
   gpg -d test.txt.gpg --output test.txt
   gpg --output test.txt -d test.txt.gpg
-  gpg --armor --output public-key.gpg --export Richard'
-
+  gpg --armor --output public-key.gpg --export Richard`
 
  ---------------
