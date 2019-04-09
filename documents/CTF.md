@@ -16,13 +16,13 @@
 
 [snow](http://www.darkside.com.au/snow/)
 
-[cribdrag.py]: https://github.com/SpiderLabs/cribdrag
+[cribdrag.py](https://github.com/SpiderLabs/cribdrag)
 
-[cribdrag]: https://github.com/SpiderLabs/cribdrag
+[cribdrag](https://github.com/SpiderLabs/cribdrag)
 
-[pcap]: https://en.wikipedia.org/wiki/Pcap
+[pcap](https://en.wikipedia.org/wiki/Pcap)
 
-[PCAP]: https://en.wikipedia.org/wiki/Pcap
+[PCAP](https://en.wikipedia.org/wiki/Pcap)
 
 [Wireshark]: https://www.wireshark.org/
 
