@@ -196,4 +196,8 @@
 
 [photorec]: https://www.cgsecurity.org/wiki/PhotoRec
 
+[Wifi Router keyspace](http://seytonic.com/2016/11/05/default-wifi-router-keyspace/)
+
+
+
 --------------------------
