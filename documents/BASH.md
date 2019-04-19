@@ -32,4 +32,6 @@
 
 `rename 's/\.sh//' *` ---Removes .sh from filenames requires apt install rename
 
+`cat file.html | grep http | cut -d'"' -f2,11-` ---entracts links from <file.html>
+
 --------------------------
