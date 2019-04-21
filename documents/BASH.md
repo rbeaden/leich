@@ -34,4 +34,15 @@
 
 `cat file.html | grep http | cut -d'"' -f2,11-` ---entracts links from <file.html>
 
+`hostname -I` ---Local Ip Address
+
+`curl ifconfig.me`
+`curl icanhazip.com`
+`curl ipecho.net/plain`
+`curl ident.me`
+`curl bot.whatismyipaddress.com`
+`curl https://diagnostic.opendns.com/myip`
+`curl http://checkip.amazonaws.com` ---Retrives public IP using curl
+
+`wget -qO- ifconfig.me` ---Public IP using wget
 --------------------------

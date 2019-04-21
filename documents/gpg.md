@@ -45,6 +45,6 @@
 
   `gpg --output test.txt -d test.txt.gpg`
 
-  `gpg --armor --output public-key.gpg --export Richard`
+  `gpg --armor --output public-key.gpg --export <File Name>`
 
  ---------------
