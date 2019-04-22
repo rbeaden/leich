@@ -1,0 +1,14 @@
+#!/bin/bash
+cd ~
+sudo apt-get update && sudo apt-get install -y apt-utils build-essential ca-certificates cron curl debhelper dialog dpkg-dev git librtlsdr-dev libusb-1.0-0-dev lighttpd netcat net-tools pkg-config python2.7 wget
+sudo apt-get update && sudo apt-get install -y librtlsdr0 rtl-sdr
+
+git clone https://github.com/tedsluis/dump1090.git
+cd dump1090
+sudo dpkg-buildpackage -b
+
+cd ..
+sudo dpkg -i dump1090-mutability_1.15~dev_armhf.deb
+
+sudo lighty-enable-mod dump1090
+sudo service lighttpd force-reload
