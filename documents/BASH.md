@@ -45,4 +45,5 @@
 `curl http://checkip.amazonaws.com` ---Retrives public IP using curl
 
 `wget -qO- ifconfig.me` ---Public IP using wget
+
 --------------------------
