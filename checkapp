@@ -5,7 +5,7 @@
 program=$1
 condition=$(which $program 2>/dev/null | grep -v "not found" | wc -l)
 if [ $condition -eq 0 ] ; then
-    echo "$program is not installed"
+    echo "$program"
 else
-    echo "$program is installed"
+    echo "installed"
 fi

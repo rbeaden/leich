@@ -7,7 +7,7 @@ scene = bpy.context.scene
 for obji in scene.objects:
     if obji.type == 'MESH':
         scene.objects.active = obji
-        bpy.ops.object.mode_set(mode='EDIT')
+        bpy.ops.object.editmode_toggle()
 
         obj = bpy.context.object
         me = obj.data
