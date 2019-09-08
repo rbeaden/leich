@@ -1,20 +1,3 @@
 #!/bin/bash
 
-echo "Install virtualbox?"
-program="virtualbox"
-condition=$(which $program 2>/dev/null | grep -v "not found" | wc -l)
-if [ $condition -eq 0 ] ; then
-        echo "virtualbox not installed, installing....."
-        sudo apt install virtualbox-qt -y
-        echo "installation complete"
-fi
-
-echo "Install vagrant?"
-program="vagrant"
-condition=$(which $program 2>/dev/null | grep -v "not found" | wc -l)
-if [ $condition -eq 0 ] ; then
-        echo "vagrant not installed, installing....."
-        sudo apt install vagrant -y
-        echo "installation complete"
-fi
-
+sudo apt install vagrant -y

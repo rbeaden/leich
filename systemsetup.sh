@@ -19,10 +19,28 @@ function choice {
 if [ $command -eq 0 ] ; then
     echo "Exiting..."
     exit
-elif [ $command -eq 2 ] ; then
-    echo "Checking Nmap..."
-    installed="$(./checkapp nmap)"
-    echo ${installed}
+elif [ $command -eq 1 ] ; then
+    echo "Checking"
+    installed="$(./checkapp atom)"
+    if [ ${installed} = atom ] ; then
+    . ./installers/atominstall
+    fi
+    echo " "
+    menu
+elif [ $command -eq 16 ] ; then
+    echo "Checking"
+    installed="$(./checkapp vagrant)"
+    if [ ${installed} = vagrant ] ; then
+    . ./installers/vagrantinstaller
+    fi
+    echo " "
+    menu
+elif [ $command -eq 15 ] ; then
+    echo "Checking"
+    installed="$(./checkapp virtualbox)"
+    if [ ${installed} = virtualbox ] ; then
+    . ./installers/vboxinstall
+    fi
     echo " "
     menu
 elif [ $command -eq 3 ] ; then
