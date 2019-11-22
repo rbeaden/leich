@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from __future__ import print_function
 import pickle
 import os.path
@@ -50,7 +52,8 @@ def main():
        #  print('Name, Major:')
         for row in values:
             # Print columns A and E, which correspond to indices 0 and 4.
-            print('%s, %s' % (row[0], row[2]))
+            # print('%s, %s, %s, %s' % (row[0], row[1], row[2], row[3]))
+            print(row[0], row[2])
 
 if __name__ == '__main__':
     main()
