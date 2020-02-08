@@ -78,9 +78,8 @@ BLUE "Installing Wireshark..."
 sudo apt-get install -y wireshark
 
 BLUE "Installing Atom..."
-wget "https://atom.io/download/deb" -O atom.deb
-dpkg -i atom.deb
-rm atom.deb
+sudo add-apt-repository ppa:webupd8team/atom
+sudo apt update; sudo apt install -y atom
 
 BLUE "Installing python-requests..."
 pip install requests
@@ -116,7 +115,7 @@ BLUE "Installing Python scapy..."
 sudo pip install scapy
 
 BLUE "Installing blender..."
-sudo apt-get install blender
+sudo apt-get install -y blender
 
 BLUE "Installing Chrome..."
 echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee -a /etc/apt/sources.list
@@ -125,7 +124,7 @@ cd ~/chromeinstall
 wget https://dl.google.com/linux/linux_signing_key.pub
 sudo apt-key add linux_signing_key.pub
 sudo apt update
-sudo apt install google-chrome-stable
+sudo apt install -y google-chrome-stable
 sudo rm /etc/apt/sources.list.d/google-chrome.list
 cd ~/
 
@@ -139,20 +138,20 @@ sudo apt-get install -y steam
 BLUE "Installing lutris..."
 sudo add-apt-repository ppa:lutris-team/lutris
 sudo apt-get update
-sudo apt-get install lutris
+sudo apt-get install -y lutris
 
 BLUE "Installing veracrypt..."
 sudo add-apt-repository ppa:unit193/encryption
 sudo apt update
-sudo apt install veracrypt
+sudo apt install -y veracrypt
 
 BLUE "Installing dirb..."
-sudo apt install dirb
+sudo apt install -y dirb
 
 BLUE "Installing net-tools whois and gparted..."
-sudo apt install net-tools
-sudo apt install whois
-sudo apt-get install gparted
+sudo apt install -y net-tools
+sudo apt install -y whois
+sudo apt-get install -y gparted
 
 BLUE "Cloning Hak5 repositories..."
 cd ~
@@ -173,3 +172,8 @@ mkdir testbench
 cd testbench
 git clone https://github.com/rbeaden/leich
 cd ~
+
+BLUE "Install metasploit..."
+curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && \
+  chmod 755 msfinstall && \
+  ./msfinstall
