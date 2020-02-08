@@ -1,0 +1,175 @@
+#!/bin/bash
+
+# Define colors...
+RED=`tput bold && tput setaf 1`
+GREEN=`tput bold && tput setaf 2`
+YELLOW=`tput bold && tput setaf 3`
+BLUE=`tput bold && tput setaf 4`
+NC=`tput sgr0`
+
+function RED(){
+	echo -e "\n${RED}${1}${NC}"
+}
+function GREEN(){
+	echo -e "\n${GREEN}${1}${NC}"
+}
+function YELLOW(){
+	echo -e "\n${YELLOW}${1}${NC}"
+}
+function BLUE(){
+	echo -e "\n${BLUE}${1}${NC}"
+}
+
+# Testing if root...
+if [ $UID -ne 0 ]
+then
+	RED "You must run this script as root!" && echo
+	exit
+fi
+
+BLUE "Updating repositories..."
+sudo apt update
+
+BLUE "Installing git..."
+sudo apt install -y git
+
+BLUE "Installing terminator..."
+sudo apt install -y terminator
+
+BLUE "Setting terminator as the default terminal emulator..."
+sed -i s/Exec=gnome-terminal/Exec=terminator/g /usr/share/applications/gnome-terminal.desktop
+
+BLUE "Forcing a color prompt in ~/.bashrc..."
+grep "export PS1" ~/.bashrc
+if [ $? -eq 1 ]
+then
+	echo "export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '" >> ~/.bashrc
+fi
+
+BLUE "Installing SimpleScreenRecorder..."
+echo "" | sudo add-apt-repository ppa:maarten-baert/simplescreenrecorder
+sudo apt-get update
+sudo apt-get install -y simplescreenrecorder
+
+BLUE "Installing pip..."
+sudo apt-get install -y python-pip
+
+BLUE "Installing openvpn..."
+sudo apt-get install -y openvpn
+
+BLUE "Installing nmap..."
+sudo apt-get install -y nmap
+
+BLUE "Installing docker..."
+sudo apt-get install -y docker.io
+sudo groupadd docker
+sudo usermod -aG docker `logname`
+
+BLUE "Installing curl..."
+sudo apt-get install -y curl
+
+BLUE "Installing Python PIL..."
+sudo apt-get install -y python-pil
+
+BLUE "Installing sqlitebrowser..."
+sudo apt-get install -y sqlitebrowser
+
+BLUE "Installing Wireshark..."
+sudo apt-get install -y wireshark
+
+BLUE "Installing Atom..."
+wget "https://atom.io/download/deb" -O atom.deb
+dpkg -i atom.deb
+rm atom.deb
+
+BLUE "Installing python-requests..."
+pip install requests
+
+BLUE "Installing idle..."
+sudo apt install -y idle
+
+BLUE "Installing Python pwntools..."
+sudo pip install pwntools
+
+BLUE "Installing sqlite..."
+sudo apt install -y sqlite
+
+BLUE "Installing nikto..."
+sudo apt install -y nikto
+
+BLUE "Installing Virtualbox..."
+sudo apt install -y virtualbox-qt
+
+BLUE "Installing Vagrant..."
+sudo apt install -y vagrant
+
+BLUE "Installing ffmpeg..."
+sudo apt install -y ffmpeg
+
+BLUE "Installing GIMP..."
+sudo apt install -y gimp
+
+BLUE "Installing cmake..."
+sudo apt install -y cmake
+
+BLUE "Installing Python scapy..."
+sudo pip install scapy
+
+BLUE "Installing blender..."
+sudo apt-get install blender
+
+BLUE "Installing Chrome..."
+echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee -a /etc/apt/sources.list
+mkdir ~/chromeinstall
+cd ~/chromeinstall
+wget https://dl.google.com/linux/linux_signing_key.pub
+sudo apt-key add linux_signing_key.pub
+sudo apt update
+sudo apt install google-chrome-stable
+sudo rm /etc/apt/sources.list.d/google-chrome.list
+cd ~/
+
+BLUE "Installing steam..."
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F24AEA9FB05498B7
+REPO="deb http://repo.steampowered.com/steam/ $(lsb_release -cs) steam"
+sudo echo "${REPO}" > /etc/apt/sources.list.d/steam.list
+sudo apt-get update
+sudo apt-get install -y steam
+
+BLUE "Installing lutris..."
+sudo add-apt-repository ppa:lutris-team/lutris
+sudo apt-get update
+sudo apt-get install lutris
+
+BLUE "Installing veracrypt..."
+sudo add-apt-repository ppa:unit193/encryption
+sudo apt update
+sudo apt install veracrypt
+
+BLUE "Installing dirb..."
+sudo apt install dirb
+
+BLUE "Installing net-tools whois and gparted..."
+sudo apt install net-tools
+sudo apt install whois
+sudo apt-get install gparted
+
+BLUE "Cloning Hak5 repositories..."
+cd ~
+mkdir hak5
+cd hak5
+wget https://wifipineapple.com/wp6.sh
+chmod +x wp6.sh
+git clone https://github.com/hak5/bashbunny-payloads
+git clone https://github.com/hak5darren/USB-Rubber-Ducky
+
+BLUE "Cloning Seclists..."
+cd ~
+git clone https://github.com/danielmiessler/SecLists
+cd ~
+
+BLUE "Creating testbench..."
+mkdir testbench
+cd testbench
+git clone https://github.com/rbeaden/leich
+cd ~
