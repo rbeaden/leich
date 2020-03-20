@@ -50,6 +50,10 @@ fi
 BLUE "Installing pip..."
 sudo apt-get install -y python-pip
 
+BLUE "Installing venv..."
+sudo apt install python3-venv
+
+
 BLUE "Installing openvpn..."
 sudo apt-get install -y openvpn
 
