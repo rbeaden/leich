@@ -53,7 +53,6 @@ sudo apt-get install -y python-pip
 BLUE "Installing venv..."
 sudo apt install python3-venv
 
-
 BLUE "Installing openvpn..."
 sudo apt-get install -y openvpn
 
@@ -160,5 +159,8 @@ BLUE "Install metasploit..."
 curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/>
   chmod 755 msfinstall && \
   ./msfinstall
+
+BLUE "Install discord"
+sudo snap install discord --classic
 
 sudo apt autoremove
