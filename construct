@@ -51,7 +51,7 @@ BLUE "Installing pip..."
 sudo apt-get install -y python-pip
 
 BLUE "Installing venv..."
-sudo apt install python3-venv
+sudo apt install -y python3-venv
 
 BLUE "Installing openvpn..."
 sudo apt-get install -y openvpn
@@ -75,11 +75,6 @@ sudo apt-get install -y sqlitebrowser
 
 BLUE "Installing Wireshark..."
 sudo apt-get install -y wireshark
-
-BLUE "Installing Atom..."
-wget "https://atom.io/download/deb" -O atom.deb
-dpkg -i atom.deb
-rm atom.deb
 
 BLUE "Installing python-requests..."
 pip install requests
@@ -156,11 +151,17 @@ sudo apt install -y whois
 sudo apt-get install -y gparted
 
 BLUE "Install metasploit..."
-curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/>
+curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && \
   chmod 755 msfinstall && \
   ./msfinstall
 
 BLUE "Install discord"
 sudo snap install discord --classic
 
+BLUE "Installing Atom..."
+wget "https://atom.io/download/deb" -O atom.deb
+dpkg -i atom.deb
+rm atom.deb
+
+sudo apt --fix-broken install
 sudo apt autoremove
