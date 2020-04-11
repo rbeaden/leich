@@ -1,10 +1,10 @@
 import bs4 as bs
 import urllib.request
 
-#from bs4 import BeautifulSoup 
+#from bs4 import BeautifulSoup
 #import urllib2
 
-source = urllib.request.urlopen('https://pythonprogramming.net/parsememcparseface/').read()
+source = urllib.request.urlopen('https://google.com').read()
 
 soup = bs.BeautifulSoup(source,'lxml')
 
@@ -20,6 +20,8 @@ print(soup.title.string)
 # beginning navigation:
 print(soup.title.parent.name)
 
+print('***************************************************')
+
 # getting specific values:
 print(soup.p)
 
@@ -29,7 +31,11 @@ for paragraph in soup.find_all('p'):
     print(paragraph.string)
     print(str(paragraph.text))
 
+print('***************************************************')
+
 for url in soup.find_all('a'):
     print(url.get('href'))
 
+print('***************************************************')
 print(soup.get_text())
+print('***************************************************')
