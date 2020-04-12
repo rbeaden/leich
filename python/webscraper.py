@@ -36,7 +36,15 @@ for item in otherurl:
 print(cleanurl)
 print(len(cleanurl))
 
-cleanurl = list(dict.fromkeys(cleanurl))
+#cleanurl = list(dict.fromkeys(cleanurl))
+
+def remove_duplicates(x):
+  return list(dict.fromkeys(x))
+
+cleanurl = remove_duplicates(cleanurl)
+
+#print(mylist)
+
 print(cleanurl)
 print(len(cleanurl))
 
