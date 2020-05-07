@@ -18,12 +18,12 @@ class Body(Turtle):
     vx, vy: x, y velocities in m/s
     px, py: x, y positions in m
     """
-    
+
     name = 'Body'
     mass = None
     vx = vy = 0.0
     px = py = 0.0
-    
+
     def attraction(self, other):
         """(Body): (fx, fy)
 
@@ -58,7 +58,7 @@ class Body(Turtle):
 
 def update_info(step, bodies):
     """(int, [Body])
-    
+
     Displays information about the status of the simulation.
     """
     print('Step #{}'.format(step))
@@ -75,7 +75,7 @@ def loop(bodies):
     positions of all the provided bodies.
     """
     timestep = 24*3600  # One day
-    
+
     for body in bodies:
         body.penup()
         body.hideturtle()
@@ -132,11 +132,17 @@ def main():
     venus.name = 'Venus'
     venus.mass = 4.8685 * 10**24
     venus.px = 0.723 * AU
-    venus.vy = -35.02 * 1000
-    venus.pencolor('red')
+    venus.vy = 35.02 * 1000
+    venus.pencolor('green')
 
-    loop([sun, earth, venus])
+    mars = Body()
+    mars.name = 'mars'
+    mars.mass = 5.6685 * 10**24
+    mars.px = 0.8 * AU
+    mars.vy = 30 * 1000
+    mars.pencolor('red')
+
+    loop([sun, earth, venus, mars])
 
 if __name__ == '__main__':
     main()
-
